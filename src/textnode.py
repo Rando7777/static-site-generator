@@ -12,19 +12,12 @@ class TextType(Enum):
 class TextNode():
 
     def __init__(self, text, text_type, url=None):
-        
         if isinstance(text_type, TextType):
             self.text_type = text_type
-        elif isinstance(text_type, str):
-            try:
-                self.text_type = TextType[text_type.upper()]
-            except KeyError:
-                self.text_type = TextType[text_type]
         else:
-            raise ValueError('Invalid text_type. Allowed TextType or String')
+            self.text_type = TextType[text_type.upper()]
 
         self.text = text
-        self.text_type = TextType[text_type]
         self.url = url
 
     def __eq__(self, other):
