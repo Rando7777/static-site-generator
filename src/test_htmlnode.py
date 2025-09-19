@@ -42,7 +42,7 @@ class TestHTMLNode(unittest.TestCase):
 
     def test_props_to_html(self):
         prop_node = HTMLNode(props={'href': 'api/endpoint', 'target': '_blank', 'data-hidden-val': '300'})
-        expected_str = ' href="api/endpoint" target="_blank" data-hidden-val="300" '
+        expected_str = ' href="api/endpoint" target="_blank" data-hidden-val="300"'
         self.assertEqual(expected_str, prop_node.props_to_html())
 
     def test_props_to_html(self):

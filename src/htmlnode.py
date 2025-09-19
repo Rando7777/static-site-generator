@@ -33,7 +33,7 @@ class HTMLNode():
             prop_list = []
             for k, v in self.props.items():
                 prop_list.append(f'{k}="{v}"')
-        return ' '+ ' '.join(prop_list) + ''
+        return ' '+ ' '.join(prop_list)
 
     def __eq__(self, other):
         return (self.tag == other.tag and
